@@ -1,0 +1,133 @@
+/* ==========================
+   Theme Colors (Black & Purple)
+   ========================== */
+   :root {
+    --primary-color: #8a2be2;
+    --primary-hover: #7a1fd8;
+    --secondary-color: #4b0082;
+    --secondary-hover: #3b006b;
+    --background: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --success-bg: rgba(76, 175, 80, 0.2);
+    --error-bg: rgba(255, 0, 0, 0.2);
+    --border-radius: 10px;
+    --box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+  }
+  
+  /* ==========================
+     Global Styles
+     ========================== */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ==========================
+     Card Component
+     ========================== */
+     .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: center;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      
+      /* New */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(138, 43, 226, 0.5);
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  /* ==========================
+     Buttons
+     ========================== */
+     .primary-button, .secondary-button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+      margin-top: 12px;
+  }
+  
+  
+  .primary-button:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+    transform: translateY(-3px);
+  }
+  
+
+  
+  .secondary-button:hover {
+    background: var(--secondary-hover);
+    box-shadow: 0 0 15px rgba(75, 0, 130, 0.7);
+    transform: translateY(-3px);
+  }
+  
+  /* ==========================
+     Input Fields
+     ========================== */
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    border: 1px solid #444;
+    background: #181818;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 12px rgba(138, 43, 226, 0.5);
+    outline: none;
+  }
+  
+  /* ==========================
+     Messages
+     ========================== */
+  .success-message {
+    background: var(--success-bg);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    text-align: center;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .error-message {
+    background: var(--error-bg);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: red;
+    font-weight: 500;
+    margin-top: 10px;
+    border-left: 4px solid red;
+  }
+  

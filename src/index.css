@@ -1,0 +1,181 @@
+/* Global Styles */
+:root {
+  --primary-color: #4caf50;
+  --primary-hover: #45a049;
+  --secondary-color: #512da8;
+  --secondary-hover: #7e57c2;
+  --text-light: #333;
+  --text-dark: #f1f1f1;
+  --background-light: #f9f9f9;
+  --background-dark: #121212;
+  --card-bg-dark: #1e1e1e;
+  --card-bg-light: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: var(--text-light);
+  background-color: var(--background-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+  }
+}
+
+/* Smooth Fade-In Effect */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Code Block Styling */
+code {
+  font-family: 'Fira Code', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+/* Card Container */
+.card {
+  background: var(--card-bg-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Mode Card */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--card-bg-dark);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Buttons */
+button {
+  margin: 6px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Secondary Button (Purple Theme) */
+.secondary-button {
+  background: var(--secondary-color);
+}
+
+.secondary-button:hover {
+  background: var(--secondary-hover);
+}
+
+/* Input Fields */
+input {
+  display: block;
+  margin: 12px auto;
+  padding: 10px;
+  width: 90%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-light);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+/* Dark Mode Input */
+@media (prefers-color-scheme: dark) {
+  input {
+    background: #222;
+    color: var(--text-dark);
+    border: 1px solid #555;
+  }
+
+  input:focus {
+    border: 1px solid var(--primary-color);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 16px;
+  }
+}
