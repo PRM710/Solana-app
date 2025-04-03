@@ -2,6 +2,8 @@
 
 This project integrates with the Solana blockchain, allowing users to connect their Solana wallet, create and mint tokens using the SPL Token Program, and interact with the blockchain seamlessly.
 
+## Live Demo  
+The project is deployed on Vercel: [Live Demo](https://solana-app-six.vercel.app/)
 
 ## Installation  
 
